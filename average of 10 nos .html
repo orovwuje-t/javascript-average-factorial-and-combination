@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CEN 434 CLASSWORK BY OROVWUJE OGHENETEGA</title>
+</head>
+<body>
+
+    <h2>Calculate the average of 10 numbers - <q>1,2,3,4,5,6,7,8,9,10</q></h2>
+    <p id="result"></p>
+
+    <script>
+        // Fixed declaration and assignment
+        const A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let sum = 0;
+        for (let i = 0; i < A.length; i++) {
+            sum += A[i];
+        }
+        const average = sum / A.length;
+        document.getElementById("result").innerText = "The average of the 10 numbers = " + average;
+    </script>
+
+    <h2>Factorial of the last two digits of my Matric Number - 20CJ027482</h2>
+    <p id="answer"></p>
+
+    <script>
+        const code = "20CJ027482";
+        const LastTwoDigits = code.slice(-2);
+        const num = parseInt(LastTwoDigits, 10); // Correct base to 10
+
+        function factorial(n) {
+            if (n === 0 || n === 1) return 1;
+            return n * factorial(n - 1);
+        }
+
+        const result = factorial(num);
+        document.getElementById("answer").innerText = "The factorial of " + num + " is: " + result;
+    </script>
+
+    <h2>Find X Combination Y</h2>
+    <p id="combination_result"></p>
+
+    <script type="text/javascript">
+        // Function to calculate factorial
+        function factorial(n) {
+            if (n === 0 || n === 1) return 1;
+            let result = 1;
+            for (let i = 2; i <= n; i++) { // Fixed syntax
+                result *= i;
+            }
+            return result;
+        }
+
+        // Function to calculate combinations (n choose r)
+        function combination(n, r) {
+            return factorial(n) / (factorial(r) * factorial(n - r));
+        }
+
+        function findCombination(x, y) {
+            return combination(x, y);
+        }
+
+        const x = 2;
+        const y = 3;
+        document.getElementById("combination_result").innerText = "The result is: " + findCombination(x, y);
+    </script>
+
+</body>
+</html>
